@@ -1,9 +1,11 @@
 import main
 import pytest
 
-def test_suma():
-    a=5
-    b=13
+def test_klasa_osoba():
+    imie="Jan"
+    nazwisko="Nowak"
+    nr_tel="123456789"
 
-    out=main.suma(a,b)
-    assert out==18
+    obj=main.Osoba(imie,nazwisko,nr_tel)
+
+    assert obj.imie==imie and obj.nazwisko==nazwisko and obj.nr_tel==nr_tel
