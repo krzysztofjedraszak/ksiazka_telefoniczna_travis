@@ -9,3 +9,9 @@ def test_klasa_osoba():
     obj=main.Osoba(imie,nazwisko,nr_tel)
 
     assert obj.imie==imie and obj.nazwisko==nazwisko and obj.nr_tel==nr_tel
+
+def test_klasa_ksiazka_telefoniczna():
+    obj=main.Ksiazka_telefoniczna()
+
+    assert hasattr(obj,"lista")
+
