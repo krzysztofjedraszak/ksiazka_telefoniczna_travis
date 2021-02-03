@@ -12,6 +12,12 @@ class Ksiazka_telefoniczna():
 
         dodana_osoba=Osoba(imie,nazwisko,nr_tel)
         self.lista.append(dodana_osoba)
+        print("Dodano!")
+
+    def wyszukaj(self,imie,nazwisko,nr_tel):
+        for i in self.lista:
+            if imie==i.imie and nazwisko==i.nazwisko and nr_tel==i.nr_tel:
+                print("Taka osoba znajduje sie w ksiazce")
 
 
 
@@ -22,3 +28,4 @@ class Ksiazka_telefoniczna():
 # nazwisko = input()
 # print("Podaj numer telefonu osoby ktora chcesz dodac")
 # nr_tel = input()
+

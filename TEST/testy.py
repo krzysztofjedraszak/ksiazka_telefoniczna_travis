@@ -17,8 +17,17 @@ def test_klasa_ksiazka_telefoniczna():
 
 def test_dodaj():
     obj=main.Ksiazka_telefoniczna()
+    ilosc_przed= len(obj.lista)
     obj.dodaj("Pawel","Piotr","987654321")
+    ilosc_po= len(obj.lista)
 
-    assert obj.lista[0]!=None
+    assert ilosc_przed+1==ilosc_po
 
+def test_wyszukaj(capsys):
+    obj=main.Ksiazka_telefoniczna()
+    obj.dodaj("Pawel", "Piotr", "987654321")
 
+    obj.wyszukaj("Pawel", "Piotr", "987654321")
+    out,err=capsys.readouterr()
+
+    assert out== "Dodano!\nTaka osoba znajduje sie w ksiazce\n"
