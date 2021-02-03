@@ -15,3 +15,10 @@ def test_klasa_ksiazka_telefoniczna():
 
     assert hasattr(obj,"lista")
 
+def test_dodaj():
+    obj=main.Ksiazka_telefoniczna()
+    obj.dodaj("Pawel","Piotr","987654321")
+
+    assert obj.lista[0]!=None
+
+
