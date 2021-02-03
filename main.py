@@ -19,7 +19,11 @@ class Ksiazka_telefoniczna():
             if imie==i.imie and nazwisko==i.nazwisko and nr_tel==i.nr_tel:
                 print("Taka osoba znajduje sie w ksiazce")
 
-
+    def usun(self,imie,nazwisko,nr_tel):
+        for i in self.lista:
+            if imie==i.imie and nazwisko==i.nazwisko and nr_tel==i.nr_tel:
+                self.lista.remove(i)
+                print("Usunieto!")
 
 
 # print("Podaj imie osoby ktora chcesz dodac")
